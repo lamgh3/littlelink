@@ -209,3 +209,8 @@ p {
         background-attachment: scroll !important;
     }
 }
+
+.column p {
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+}
