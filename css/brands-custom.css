@@ -1,9 +1,13 @@
 
-/* =====================================
-   LITTLELINK — PERSONALIZAÇÃO LAM
-   ===================================== */
+/* ==========================================
+   LITTLELINK — PERSONALIZAÇÃO H. LAM
+   ========================================== */
 
-/* FUNDO COM IMAGEM */
+
+/* ==========================================
+   1. FUNDO COM IMAGEM
+   ========================================== */
+
 body,
 body.theme-auto,
 body.theme-dark,
@@ -18,78 +22,96 @@ body.theme-light {
     min-height: 100vh;
 }
 
-/* TEXTO DO PERFIL */
-h1, p {
+
+/* ==========================================
+   2. TEXTOS DO PERFIL
+   ========================================== */
+
+h1,
+p {
     color: #ffffff !important;
 }
 
-/* =====================================
-   BOTÕES — VIDRO BRANCO
-   ===================================== */
+
+/* ==========================================
+   3. BOTÕES — FROSTED GLASS
+   ========================================== */
 
 .button {
-    background: rgba(255, 255, 255, 0.90) !important;
-    color: #241633 !important;
+    background: rgba(255, 255, 255, 0.25) !important;
+    background-image: none !important;
 
-    border: 1.5px solid rgba(255, 255, 255, 0.65);
+    color: #ffffff !important;
+
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
     border-radius: 8px;
 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
     box-shadow:
-        0 4px 14px rgba(0, 0, 0, 0.12),
-        inset 0 1px 2px rgba(255, 255, 255, 0.8);
+        inset 0 1px 2px rgba(255, 255, 255, 0.25),
+        0 4px 15px rgba(0, 0, 0, 0.15);
 
-    transition: all 0.2s ease;
+    opacity: 1;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
+
+
+/* ==========================================
+   4. BORDAS COLORIDAS
+   ========================================== */
 
 /* GHDS | Discord */
 .button.button-ghds---discord {
-    border-color: #555b79;
+    border-color: #555b79 !important;
 }
 
 /* Lista de Músicas */
 .button.button-lista-de-m-sicas--pedidos- {
-    border-color: #2678c5;
+    border-color: #2678c5 !important;
 }
 
 /* R$3 Pedido | Lista */
 .button.button-r-3-pedido---lista {
-    border-color: #15965b;
+    border-color: #15965b !important;
 }
 
 /* R$3 VIP | Fura-Fila */
 .button.button-r-3-vip---fura-fila {
-    border-color: #c02b91;
+    border-color: #c02b91 !important;
 }
 
 /* R$10 Pedido | enchor.us */
 .button.button-r-10-pedido---enchor-us {
-    border-color: #52647d;
+    border-color: #52647d !important;
 }
 
 /* Controles Originais PS2 */
 .button.button-controles-originais-ps2 {
-    border-color: #ee4d2d;
+    border-color: #ee4d2d !important;
 }
 
 /* Adaptador PS2 */
 .button.button-adaptador---controle-ps2 {
-    border-color: #d9ad1e;
+    border-color: #d9ad1e !important;
 }
 
 /* Guitarras CRKD */
 .button.button-guitarras-crkd {
-    border-color: #d9ad1e;
+    border-color: #d9ad1e !important;
 }
 
 /* Instagram — borda degradê */
 .button.button-instagram {
     background:
         linear-gradient(
-            rgba(255,255,255,0.90),
-            rgba(255,255,255,0.90)
+            rgba(255, 255, 255, 0.25),
+            rgba(255, 255, 255, 0.25)
         ) padding-box,
         linear-gradient(
             45deg,
@@ -100,25 +122,49 @@ h1, p {
             #d60fa4
         ) border-box !important;
 
-    border: 1.5px solid transparent;
+    border: 1.5px solid transparent !important;
 }
 
 /* TikTok */
 .button.button-tiktok {
-    border-color: #252525;
+    border-color: #252525 !important;
 }
 
 /* YouTube */
 .button.button-youtube {
-    border-color: #8a0010;
+    border-color: #8a0010 !important;
 }
 
-/* EFEITO AO PASSAR O MOUSE */
+
+/* ==========================================
+   5. EFEITO HOVER
+   ========================================== */
+
 .button:hover {
+    background-color: rgba(255, 255, 255, 0.38) !important;
+
     transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.30) !important;
 
     box-shadow:
-        0 7px 20px rgba(0, 0, 0, 0.18),
-        inset 0 1px 2px rgba(255, 255, 255, 0.9);
+        0 7px 20px rgba(0, 0, 0, 0.22),
+        inset 0 1px 3px rgba(255, 255, 255, 0.30);
+}
+
+
+/* ==========================================
+   6. AJUSTES PARA CELULAR
+   ========================================== */
+
+@media (max-width: 600px) {
+    body,
+    body.theme-auto,
+    body.theme-dark,
+    body.theme-light {
+        background-attachment: scroll !important;
+    }
+
+    .button {
+        backdrop-filter: blur(16px) saturate(140%);
+        -webkit-backdrop-filter: blur(16px) saturate(140%);
+    }
 }
