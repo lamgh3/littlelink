@@ -25,3 +25,17 @@
 
 /* R$3 VIP | Fura-Fila */
 .button.button-r-3-vip---fura-fila { background-color: #780754; color: #ffffff !important; }
+
+/* Fundo com degradê roxo escuro */
+body,
+body.theme-auto,
+body.theme-dark,
+body.theme-light {
+  background: linear-gradient(180deg, #2e0f55 0%, #1a0836 50%, #0d0220 100%) fixed no-repeat !important;
+  min-height: 100vh;
+}
+
+/* Texto claro para ler bem no fundo escuro */
+h1, p {
+  color: #ffffff !important;
+}
