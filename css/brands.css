@@ -535,8 +535,7 @@
 /* TikTok */
 .button-tiktok {
 	--button-text:#ffffff;
-	--button-background:#000000;
-	--button-border:1px solid #FFFFFF;
+	--button-background:#161717;
 }
 
 /* Trello */
@@ -606,8 +605,7 @@
 /* YouTube */
 .button-yt {
 	--button-text:#ffffff;
-	--button-background:#282828;
-	--button-border:1px solid #FFFFFF;
+	--button-background:#8a0010;
 }
 
 /* YouTube Music */
