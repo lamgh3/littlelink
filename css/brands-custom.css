@@ -1,30 +1,17 @@
-
-/* ==========================================
-   LITTLELINK — PERSONALIZAÇÃO H. LAM
-   ========================================== */
-
-/* 1. FUNDO COM IMAGEM */
-body,
-body.theme-auto,
-body.theme-dark,
-body.theme-light {
+/* FUNDO DA PÁGINA */
+body {
     background:
-        linear-gradient(
-            rgba(13, 2, 32, 0.45),
-            rgba(13, 2, 32, 0.70)
-        ),
+        linear-gradient(rgba(25, 10, 45, 0.65), rgba(25, 10, 45, 0.65)),
         url("../images/fundo.jpg") center center / cover fixed no-repeat !important;
-
-    min-height: 100vh;
 }
 
-/* 2. TEXTOS */
+/* TÍTULO E DESCRIÇÃO */
 h1,
 p {
     color: #ffffff !important;
 }
 
-/* 3. TODOS OS BOTÕES — VIDRO TRANSLÚCIDO */
+/* BOTÕES — ESTILO DE VIDRO */
 .button {
     background: rgba(255, 255, 255, 0.25) !important;
     background-image: none !important;
@@ -33,137 +20,123 @@ p {
     backdrop-filter: blur(16px) saturate(140%);
     -webkit-backdrop-filter: blur(16px) saturate(140%);
 
-    border: 1.5px solid rgba(255, 255, 255, 0.35);
-    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.8) !important;
+    border-radius: 12px;
 
-    box-shadow:
-        inset 0 1px 2px rgba(255, 255, 255, 0.25),
-        0 4px 15px rgba(0, 0, 0, 0.15);
-
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     transition: all 0.25s ease;
 }
 
-/* 4. BORDAS COLORIDAS NORMAIS */
-
-/* Lista de Músicas */
+/* BORDAS DOS BOTÕES NORMAIS */
 .button.button-lista-de-m-sicas--pedidos- {
-    border-color: #2678c5 !important;
+    border-color: #1DB954 !important;
 }
 
-/* R$3 Pedido */
 .button.button-r-3-pedido---lista {
-    border-color: #15965b !important;
+    border-color: #ff9800 !important;
 }
 
-/* R$3 VIP */
 .button.button-r-3-vip---fura-fila {
-    border-color: #c02b91 !important;
+    border-color: #ffd700 !important;
 }
 
-/* R$10 Pedido */
 .button.button-r-10-pedido---enchor-us {
-    border-color: #52647d !important;
+    border-color: #e91e63 !important;
 }
 
-/* Controles PS2 */
 .button.button-controles-originais-ps2 {
-    border-color: #ee4d2d !important;
+    border-color: #1565c0 !important;
 }
 
-/* Adaptador PS2 e Guitarras CRKD */
-.button.button-adaptador---controle-ps2,
+.button.button-adaptador---controle-ps2 {
+    border-color: #00bcd4 !important;
+}
+
 .button.button-guitarras-crkd {
-    border-color: #d9ad1e !important;
+    border-color: #9c27b0 !important;
 }
 
-/* YouTube */
-.button.button-youtube {
-    border-color: #8a0010 !important;
-}
+/* GHDS, INSTAGRAM E TIKTOK:
+   INTERIOR BRANCO TRANSLÚCIDO
+   DEGRADÊ SOMENTE NA BORDA */
 
-/* 5. GHDS — INTERIOR BRANCO + BORDA DEGRADÊ */
-.button.button-ghds---discord {
-    background: rgba(255, 255, 255, 0.25) !important;
-    border: 2px solid transparent !important;
-
-    background-image:
-        linear-gradient(
-            rgba(255, 255, 255, 0.25),
-            rgba(255, 255, 255, 0.25)
-        ),
-        linear-gradient(
-            90deg,
-            #ff3b30,
-            #ff9500,
-            #ffcc00,
-            #34c759,
-            #007aff
-        ) !important;
-
-    background-origin: border-box !important;
-    background-clip: padding-box, border-box !important;
-}
-
-/* 6. INSTAGRAM — INTERIOR BRANCO + BORDA DEGRADÊ */
-.button.button-instagram {
-    background: rgba(255, 255, 255, 0.25) !important;
-    border: 2px solid transparent !important;
-
-    background-image:
-        linear-gradient(
-            rgba(255, 255, 255, 0.25),
-            rgba(255, 255, 255, 0.25)
-        ),
-        linear-gradient(
-            45deg,
-            #ebc51c,
-            #e6683c,
-            #dc2743,
-            #cc2366,
-            #d60fa4
-        ) !important;
-
-    background-origin: border-box !important;
-    background-clip: padding-box, border-box !important;
-}
-
-/* 7. TIKTOK — INTERIOR BRANCO + BORDA TURQUESA E ROSA */
+.button.button-ghds---discord,
+.button.button-instagram,
 .button.button-tiktok {
     background: rgba(255, 255, 255, 0.25) !important;
-    border: 2px solid transparent !important;
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    background-image: none !important;
 
-    background-image:
-        linear-gradient(
-            rgba(255, 255, 255, 0.25),
-            rgba(255, 255, 255, 0.25)
-        ),
-        linear-gradient(
-            90deg,
-            #25f4ee,
-            #00c9c8,
-            #ff5ca8,
-            #fe2c55
-        ) !important;
+    border: 3px solid transparent !important;
+    background-clip: padding-box !important;
 
-    background-origin: border-box !important;
-    background-clip: padding-box, border-box !important;
+    position: relative;
+    isolation: isolate;
 }
 
-/* 8. HOVER */
+/* BORDA GRADIENTE */
+.button.button-ghds---discord::before,
+.button.button-instagram::before,
+.button.button-tiktok::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: inherit;
+    padding: 3px;
+    z-index: -1;
+    pointer-events: none;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+/* GHDS — BORDA COLORIDA */
+.button.button-ghds---discord::before {
+    background: linear-gradient(
+        90deg,
+        #ff3b30,
+        #ff9500,
+        #ffcc00,
+        #34c759,
+        #007aff,
+        #af52de
+    );
+}
+
+/* INSTAGRAM — BORDA GRADIENTE */
+.button.button-instagram::before {
+    background: linear-gradient(
+        45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5
+    );
+}
+
+/* TIKTOK — BORDA AZUL E ROSA */
+.button.button-tiktok::before {
+    background: linear-gradient(
+        90deg,
+        #25f4ee,
+        #ffffff,
+        #fe2c55
+    );
+}
+
+/* EFEITO AO PASSAR O MOUSE */
 .button:hover {
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 7px 20px rgba(0, 0, 0, 0.22),
-        inset 0 1px 3px rgba(255, 255, 255, 0.30);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* 9. CELULAR */
+/* CELULAR */
 @media (max-width: 600px) {
-    body,
-    body.theme-auto,
-    body.theme-dark,
-    body.theme-light {
+    body {
         background-attachment: scroll !important;
     }
 }
