@@ -81,14 +81,12 @@ p {
     border-color: #8a0010 !important;
 }
 
-/* 5. BOTÕES COM BORDA DEGRADÊ */
-/* Interior branco translúcido + borda de 1.5px */
-
+/* 5. INTERIOR DOS BOTÕES COM DEGRADÊ */
 .button.button-ghds---discord,
 .button.button-instagram,
 .button.button-tiktok {
     background: rgba(255, 255, 255, 0.25) !important;
-    background-color: transparent !important;
+    background-color: rgba(255, 255, 255, 0.25) !important;
     background-image: none !important;
 
     border: 1.5px solid transparent !important;
@@ -97,17 +95,16 @@ p {
     isolation: isolate;
 }
 
-/* Camada responsável exclusivamente pela borda */
-.button.button-ghds---discord::before {
-   inset: -1.5px;
-    padding: 1.5px;
-}
+/* 6. CAMADA DAS BORDAS GRADIENTES */
+.button.button-ghds---discord::before,
 .button.button-instagram::before,
 .button.button-tiktok::before {
     content: "";
     position: absolute;
+
     inset: -1.5px;
     padding: 1.5px;
+
     border-radius: inherit;
     pointer-events: none;
     z-index: -1;
@@ -116,10 +113,14 @@ p {
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
+
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
     mask-composite: exclude;
 }
 
-/* GHDS — DEGRADÊ ORIGINAL */
+/* 7. GHDS — DEGRADÊ ORIGINAL */
 .button.button-ghds---discord::before {
     background: linear-gradient(
         90deg,
@@ -131,7 +132,7 @@ p {
     );
 }
 
-/* INSTAGRAM — DEGRADÊ ORIGINAL */
+/* 8. INSTAGRAM — DEGRADÊ ORIGINAL */
 .button.button-instagram::before {
     background: linear-gradient(
         45deg,
@@ -143,7 +144,7 @@ p {
     );
 }
 
-/* TIKTOK — DEGRADÊ ORIGINAL */
+/* 9. TIKTOK — DEGRADÊ ORIGINAL */
 .button.button-tiktok::before {
     background: linear-gradient(
         90deg,
@@ -154,7 +155,7 @@ p {
     );
 }
 
-/* 8. HOVER */
+/* 10. HOVER */
 .button:hover {
     transform: translateY(-2px);
 
@@ -163,7 +164,7 @@ p {
         inset 0 1px 3px rgba(255, 255, 255, 0.30);
 }
 
-/* 9. CELULAR */
+/* 11. CELULAR */
 @media (max-width: 600px) {
     body,
     body.theme-auto,
