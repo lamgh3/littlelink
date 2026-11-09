@@ -82,7 +82,44 @@ p {
 }
 
 /* 5. INTERIOR DOS BOTÕES COM DEGRADÊ */
-.button.button-ghds---discord,
+/* GHDS — INTERIOR BRANCO E BORDA DEGRADÊ */
+.button.button-ghds---discord {
+    background: rgba(255, 255, 255, 0.25) !important;
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    background-image: none !important;
+
+    border: 1.5px solid transparent !important;
+
+    position: relative;
+    isolation: isolate;
+}
+
+/* BORDA GRADIENTE */
+.button.button-ghds---discord::before {
+    content: "";
+    position: absolute;
+    inset: -1.5px;
+    border: 1.5px solid transparent;
+    border-radius: inherit;
+
+    background: linear-gradient(
+        90deg,
+        #ff3b30,
+        #ff9500,
+        #ffcc00,
+        #34c759,
+        #007aff
+    ) border-box;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    pointer-events: none;
+    z-index: -1;
+}
 .button.button-instagram,
 .button.button-tiktok {
     background: rgba(255, 255, 255, 0.25) !important;
@@ -96,34 +133,6 @@ p {
 }
 
 /* 6. CAMADA DAS BORDAS GRADIENTES */
-/* GHDS — BORDA GRADIENTE FINA */
-.button.button-ghds---discord {
-    border: 1.5px solid transparent !important;
-
-    background:
-        linear-gradient(
-            rgba(255, 255, 255, 0.25),
-            rgba(255, 255, 255, 0.25)
-        ) padding-box,
-
-        linear-gradient(
-            90deg,
-            #ff3b30,
-            #ff9500,
-            #ffcc00,
-            #34c759,
-            #007aff
-        ) border-box !important;
-
-    background-origin: border-box !important;
-    background-clip: padding-box, border-box !important;
-}
-
-/* Desativa a camada externa antiga */
-.button.button-ghds---discord::before {
-    content: none !important;
-}
-
 .button.button-instagram::before,
 .button.button-tiktok::before {
     content: "";
