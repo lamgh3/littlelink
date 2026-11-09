@@ -4,13 +4,6 @@
 /* GHDS | Discord */
 .button.button-ghds---discord { background-color: #1c1f2e; color: #ffffff !important; }
 
-/* Controles Originais PS2 (Shopee) */
-.button.button-controles-originais-ps2 { background-color: #ee4d2d; color: #ffffff !important; }
-
-/* Adaptador | Controle PS2 e Guitarras CRKD (Mercado Livre) */
-.button.button-adaptador---controle-ps2,
-.button.button-guitarras-crkd { background-color: #d9ad1e; color: #ffffff !important; }
-
 /* Lista de Músicas (Pedidos) (Google Docs) */
 .button.button-lista-de-m-sicas--pedidos- { background-color: #054585; color: #ffffff !important; }
 
@@ -22,6 +15,16 @@
 
 /* R$10 Pedido | enchor.us */
 .button.button-r-10-pedido---enchor-us { background-color: #2c3a4d; color: #ffffff !important; }
+
+/* Controles Originais PS2 (Shopee) */
+.button.button-controles-originais-ps2 { background-color: #ee4d2d; color: #ffffff !important; }
+
+/* Adaptador | Controle PS2 e Guitarras CRKD (Mercado Livre) */
+.button.button-adaptador---controle-ps2,
+.button.button-guitarras-crkd { background-color: #d9ad1e; color: #ffffff !important; }
+
+/* Instagram (o template já tem .button-instagram; esta regra sobrescreve com o degradê) */
+.button.button-instagram { background: linear-gradient(45deg, #ebc51c, #e6683c 30%, #dc2743 55%, #cc2366 75%, #d60fa4); color: #ffffff !important; }
 
 /* Fundo com degradê roxo escuro */
 body,
