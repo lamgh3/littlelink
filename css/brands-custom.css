@@ -56,10 +56,7 @@ p {
     border-color: #9c27b0 !important;
 }
 
-/* GHDS, INSTAGRAM E TIKTOK:
-   INTERIOR BRANCO TRANSLÚCIDO
-   DEGRADÊ SOMENTE NA BORDA */
-
+/* BOTÕES COM BORDA GRADIENTE */
 .button.button-ghds---discord,
 .button.button-instagram,
 .button.button-tiktok {
@@ -67,22 +64,22 @@ p {
     background-color: rgba(255, 255, 255, 0.25) !important;
     background-image: none !important;
 
-    border: 3px solid transparent !important;
+    border: 2px solid transparent !important;
     background-clip: padding-box !important;
 
     position: relative;
     isolation: isolate;
 }
 
-/* BORDA GRADIENTE */
+/* CAMADA DA BORDA — AGORA COM 2PX */
 .button.button-ghds---discord::before,
 .button.button-instagram::before,
 .button.button-tiktok::before {
     content: "";
     position: absolute;
-    inset: -3px;
+    inset: -2px;
     border-radius: inherit;
-    padding: 3px;
+    padding: 2px;
     z-index: -1;
     pointer-events: none;
 
@@ -93,7 +90,7 @@ p {
     mask-composite: exclude;
 }
 
-/* GHDS — BORDA COLORIDA */
+/* GHDS */
 .button.button-ghds---discord::before {
     background: linear-gradient(
         90deg,
@@ -106,7 +103,7 @@ p {
     );
 }
 
-/* INSTAGRAM — BORDA GRADIENTE */
+/* INSTAGRAM */
 .button.button-instagram::before {
     background: linear-gradient(
         45deg,
@@ -118,7 +115,7 @@ p {
     );
 }
 
-/* TIKTOK — BORDA AZUL E ROSA */
+/* TIKTOK */
 .button.button-tiktok::before {
     background: linear-gradient(
         90deg,
