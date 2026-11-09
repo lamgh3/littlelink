@@ -3,11 +3,7 @@
    LITTLELINK — PERSONALIZAÇÃO H. LAM
    ========================================== */
 
-
-/* ==========================================
-   1. FUNDO COM IMAGEM
-   ========================================== */
-
+/* 1. FUNDO COM IMAGEM */
 body,
 body.theme-auto,
 body.theme-dark,
@@ -22,25 +18,16 @@ body.theme-light {
     min-height: 100vh;
 }
 
-
-/* ==========================================
-   2. TEXTOS DO PERFIL
-   ========================================== */
-
+/* 2. TEXTOS */
 h1,
 p {
     color: #ffffff !important;
 }
 
-
-/* ==========================================
-   3. BOTÕES — FROSTED GLASS
-   ========================================== */
-
+/* 3. TODOS OS BOTÕES — VIDRO TRANSLÚCIDO */
 .button {
     background: rgba(255, 255, 255, 0.25) !important;
     background-image: none !important;
-
     color: #ffffff !important;
 
     backdrop-filter: blur(16px) saturate(140%);
@@ -53,50 +40,38 @@ p {
         inset 0 1px 2px rgba(255, 255, 255, 0.25),
         0 4px 15px rgba(0, 0, 0, 0.15);
 
-    opacity: 1;
-
-    transition:
-        background 0.25s ease,
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+    transition: all 0.25s ease;
 }
 
-
-/* ==========================================
-   4. BORDAS COLORIDAS NORMAIS
-   ========================================== */
+/* 4. BORDAS COLORIDAS NORMAIS */
 
 /* Lista de Músicas */
 .button.button-lista-de-m-sicas--pedidos- {
     border-color: #2678c5 !important;
 }
 
-/* R$3 Pedido | Lista */
+/* R$3 Pedido */
 .button.button-r-3-pedido---lista {
     border-color: #15965b !important;
 }
 
-/* R$3 VIP | Fura-Fila */
+/* R$3 VIP */
 .button.button-r-3-vip---fura-fila {
     border-color: #c02b91 !important;
 }
 
-/* R$10 Pedido | enchor.us */
+/* R$10 Pedido */
 .button.button-r-10-pedido---enchor-us {
     border-color: #52647d !important;
 }
 
-/* Controles Originais PS2 */
+/* Controles PS2 */
 .button.button-controles-originais-ps2 {
     border-color: #ee4d2d !important;
 }
 
-/* Adaptador PS2 */
-.button.button-adaptador---controle-ps2 {
-    border-color: #d9ad1e !important;
-}
-
-/* Guitarras CRKD */
+/* Adaptador PS2 e Guitarras CRKD */
+.button.button-adaptador---controle-ps2,
 .button.button-guitarras-crkd {
     border-color: #d9ad1e !important;
 }
@@ -106,17 +81,16 @@ p {
     border-color: #8a0010 !important;
 }
 
-
-/* ==========================================
-   5. GHDS — CONTORNO DE CINCO CORES
-   ========================================== */
-
+/* 5. GHDS — INTERIOR BRANCO + BORDA DEGRADÊ */
 .button.button-ghds---discord {
-    background:
+    background: rgba(255, 255, 255, 0.25) !important;
+    border: 2px solid transparent !important;
+
+    background-image:
         linear-gradient(
             rgba(255, 255, 255, 0.25),
             rgba(255, 255, 255, 0.25)
-        ) padding-box,
+        ),
         linear-gradient(
             90deg,
             #ff3b30,
@@ -124,22 +98,22 @@ p {
             #ffcc00,
             #34c759,
             #007aff
-        ) border-box !important;
+        ) !important;
 
-    border: 1.5px solid transparent !important;
+    background-origin: border-box !important;
+    background-clip: padding-box, border-box !important;
 }
 
-
-/* ==========================================
-   6. INSTAGRAM — CONTORNO DEGRADÊ
-   ========================================== */
-
+/* 6. INSTAGRAM — INTERIOR BRANCO + BORDA DEGRADÊ */
 .button.button-instagram {
-    background:
+    background: rgba(255, 255, 255, 0.25) !important;
+    border: 2px solid transparent !important;
+
+    background-image:
         linear-gradient(
             rgba(255, 255, 255, 0.25),
             rgba(255, 255, 255, 0.25)
-        ) padding-box,
+        ),
         linear-gradient(
             45deg,
             #ebc51c,
@@ -147,38 +121,35 @@ p {
             #dc2743,
             #cc2366,
             #d60fa4
-        ) border-box !important;
+        ) !important;
 
-    border: 1.5px solid transparent !important;
+    background-origin: border-box !important;
+    background-clip: padding-box, border-box !important;
 }
 
-
-/* ==========================================
-   7. TIKTOK — CONTORNO TURQUESA E ROSA
-   ========================================== */
-
+/* 7. TIKTOK — INTERIOR BRANCO + BORDA TURQUESA E ROSA */
 .button.button-tiktok {
-    background:
+    background: rgba(255, 255, 255, 0.25) !important;
+    border: 2px solid transparent !important;
+
+    background-image:
         linear-gradient(
             rgba(255, 255, 255, 0.25),
             rgba(255, 255, 255, 0.25)
-        ) padding-box,
+        ),
         linear-gradient(
             90deg,
             #25f4ee,
             #00c9c8,
             #ff5ca8,
             #fe2c55
-        ) border-box !important;
+        ) !important;
 
-    border: 1.5px solid transparent !important;
+    background-origin: border-box !important;
+    background-clip: padding-box, border-box !important;
 }
 
-
-/* ==========================================
-   8. EFEITO AO PASSAR O MOUSE
-   ========================================== */
-
+/* 8. HOVER */
 .button:hover {
     transform: translateY(-2px);
 
@@ -187,11 +158,7 @@ p {
         inset 0 1px 3px rgba(255, 255, 255, 0.30);
 }
 
-
-/* ==========================================
-   9. AJUSTES PARA CELULAR
-   ========================================== */
-
+/* 9. CELULAR */
 @media (max-width: 600px) {
     body,
     body.theme-auto,
