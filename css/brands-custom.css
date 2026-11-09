@@ -98,7 +98,10 @@ p {
 }
 
 /* Camada responsável exclusivamente pela borda */
-.button.button-ghds---discord::before,
+.button.button-ghds---discord::before {
+   inset: -1.5px;
+    padding: 1.5px;
+}
 .button.button-instagram::before,
 .button.button-tiktok::before {
     content: "";
