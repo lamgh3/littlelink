@@ -109,3 +109,18 @@ body.theme-light {
 h1, p {
     color: #ffffff !important;
 }
+
+/* IMAGEM DE FUNDO */
+body,
+body.theme-auto,
+body.theme-dark,
+body.theme-light {
+    background:
+        linear-gradient(
+            rgba(13, 2, 32, 0.45),
+            rgba(13, 2, 32, 0.70)
+        ),
+        url("../images/fundo.jpg") center center / cover fixed no-repeat !important;
+
+    min-height: 100vh;
+}
