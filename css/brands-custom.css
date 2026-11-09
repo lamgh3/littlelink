@@ -81,72 +81,74 @@ p {
     border-color: #8a0010 !important;
 }
 
-/* 5. GHDS — INTERIOR BRANCO + BORDA DEGRADÊ */
-.button.button-ghds---discord {
-    background: rgba(255, 255, 255, 0.25) !important;
-    border: 2px solid transparent !important;
+/* 5. BOTÕES COM BORDA DEGRADÊ */
+/* Interior branco translúcido + borda de 1.5px */
 
-    background-image:
-        linear-gradient(
-            rgba(255, 255, 255, 0.25),
-            rgba(255, 255, 255, 0.25)
-        ),
-        linear-gradient(
-            90deg,
-            #ff3b30,
-            #ff9500,
-            #ffcc00,
-            #34c759,
-            #007aff
-        ) !important;
-
-    background-origin: border-box !important;
-    background-clip: padding-box, border-box !important;
-}
-
-/* 6. INSTAGRAM — INTERIOR BRANCO + BORDA DEGRADÊ */
-.button.button-instagram {
-    background: rgba(255, 255, 255, 0.25) !important;
-    border: 2px solid transparent !important;
-
-    background-image:
-        linear-gradient(
-            rgba(255, 255, 255, 0.25),
-            rgba(255, 255, 255, 0.25)
-        ),
-        linear-gradient(
-            45deg,
-            #ebc51c,
-            #e6683c,
-            #dc2743,
-            #cc2366,
-            #d60fa4
-        ) !important;
-
-    background-origin: border-box !important;
-    background-clip: padding-box, border-box !important;
-}
-
-/* 7. TIKTOK — INTERIOR BRANCO + BORDA TURQUESA E ROSA */
+.button.button-ghds---discord,
+.button.button-instagram,
 .button.button-tiktok {
     background: rgba(255, 255, 255, 0.25) !important;
-    border: 2px solid transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
 
-    background-image:
-        linear-gradient(
-            rgba(255, 255, 255, 0.25),
-            rgba(255, 255, 255, 0.25)
-        ),
-        linear-gradient(
-            90deg,
-            #25f4ee,
-            #00c9c8,
-            #ff5ca8,
-            #fe2c55
-        ) !important;
+    border: 1.5px solid transparent !important;
 
-    background-origin: border-box !important;
-    background-clip: padding-box, border-box !important;
+    position: relative;
+    isolation: isolate;
+}
+
+/* Camada responsável exclusivamente pela borda */
+.button.button-ghds---discord::before,
+.button.button-instagram::before,
+.button.button-tiktok::before {
+    content: "";
+    position: absolute;
+    inset: -1.5px;
+    padding: 1.5px;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: -1;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+/* GHDS — DEGRADÊ ORIGINAL */
+.button.button-ghds---discord::before {
+    background: linear-gradient(
+        90deg,
+        #ff3b30,
+        #ff9500,
+        #ffcc00,
+        #34c759,
+        #007aff
+    );
+}
+
+/* INSTAGRAM — DEGRADÊ ORIGINAL */
+.button.button-instagram::before {
+    background: linear-gradient(
+        45deg,
+        #ebc51c,
+        #e6683c,
+        #dc2743,
+        #cc2366,
+        #d60fa4
+    );
+}
+
+/* TIKTOK — DEGRADÊ ORIGINAL */
+.button.button-tiktok::before {
+    background: linear-gradient(
+        90deg,
+        #25f4ee,
+        #00c9c8,
+        #ff5ca8,
+        #fe2c55
+    );
 }
 
 /* 8. HOVER */
