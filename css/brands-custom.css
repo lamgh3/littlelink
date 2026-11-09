@@ -63,13 +63,8 @@ p {
 
 
 /* ==========================================
-   4. BORDAS COLORIDAS
+   4. BORDAS COLORIDAS NORMAIS
    ========================================== */
-
-/* GHDS | Discord */
-.button.button-ghds---discord {
-    border-color: #555b79 !important;
-}
 
 /* Lista de Músicas */
 .button.button-lista-de-m-sicas--pedidos- {
@@ -106,7 +101,39 @@ p {
     border-color: #d9ad1e !important;
 }
 
-/* Instagram — borda degradê */
+/* YouTube */
+.button.button-youtube {
+    border-color: #8a0010 !important;
+}
+
+
+/* ==========================================
+   5. GHDS — CONTORNO DE CINCO CORES
+   ========================================== */
+
+.button.button-ghds---discord {
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.25),
+            rgba(255, 255, 255, 0.25)
+        ) padding-box,
+        linear-gradient(
+            90deg,
+            #ff3b30,
+            #ff9500,
+            #ffcc00,
+            #34c759,
+            #007aff
+        ) border-box !important;
+
+    border: 1.5px solid transparent !important;
+}
+
+
+/* ==========================================
+   6. INSTAGRAM — CONTORNO DEGRADÊ
+   ========================================== */
+
 .button.button-instagram {
     background:
         linear-gradient(
@@ -125,24 +152,34 @@ p {
     border: 1.5px solid transparent !important;
 }
 
-/* TikTok */
-.button.button-tiktok {
-    border-color: #252525 !important;
-}
 
-/* YouTube */
-.button.button-youtube {
-    border-color: #8a0010 !important;
+/* ==========================================
+   7. TIKTOK — CONTORNO TURQUESA E ROSA
+   ========================================== */
+
+.button.button-tiktok {
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.25),
+            rgba(255, 255, 255, 0.25)
+        ) padding-box,
+        linear-gradient(
+            90deg,
+            #25f4ee,
+            #00c9c8,
+            #ff5ca8,
+            #fe2c55
+        ) border-box !important;
+
+    border: 1.5px solid transparent !important;
 }
 
 
 /* ==========================================
-   5. EFEITO HOVER
+   8. EFEITO AO PASSAR O MOUSE
    ========================================== */
 
 .button:hover {
-    background-color: rgba(255, 255, 255, 0.38) !important;
-
     transform: translateY(-2px);
 
     box-shadow:
@@ -152,7 +189,7 @@ p {
 
 
 /* ==========================================
-   6. AJUSTES PARA CELULAR
+   9. AJUSTES PARA CELULAR
    ========================================== */
 
 @media (max-width: 600px) {
@@ -161,10 +198,5 @@ p {
     body.theme-dark,
     body.theme-light {
         background-attachment: scroll !important;
-    }
-
-    .button {
-        backdrop-filter: blur(16px) saturate(140%);
-        -webkit-backdrop-filter: blur(16px) saturate(140%);
     }
 }
