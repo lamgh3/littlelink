@@ -116,7 +116,7 @@ h1, p {
 /* EFEITO AO PASSAR O MOUSE */
 .button:hover {
     transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.97) !important;
+    background: rgba(255, 255, 255, 0.30) !important;
 
     box-shadow:
         0 7px 20px rgba(0, 0, 0, 0.18),
