@@ -27,7 +27,7 @@
 .button.button-instagram { background: linear-gradient(45deg, #ebc51c, #e6683c 30%, #dc2743 55%, #cc2366 75%, #d60fa4); color: #ffffff !important; }
 
 /* TikTok */
-.button.button-r-3-tiktok { background-color: #161717; color: #ffffff !important; }
+.button.button-tiktok { background-color: #161717; color: #ffffff !important; }
 
 /* Fundo com degradê roxo escuro */
 body,
