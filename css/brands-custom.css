@@ -214,3 +214,6 @@ p {
   margin-top: 0 !important;
   margin-bottom: 4px !important;
 }
+.column p:last-of-type {
+  margin-bottom: 24px !important;
+}
