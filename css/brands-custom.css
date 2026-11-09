@@ -29,6 +29,9 @@
 /* TikTok */
 .button.button-tiktok { background-color: #161717; color: #ffffff !important; }
 
+/* YouTube */
+.button.button-youtube { background-color: #8a0010; color: #ffffff !important; }
+
 /* Fundo com degradê roxo escuro */
 body,
 body.theme-auto,
